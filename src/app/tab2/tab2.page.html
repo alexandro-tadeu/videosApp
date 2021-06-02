@@ -22,7 +22,7 @@
 
                 <ion-label class="ion-text-wrap">
                     <div>
-                        <h1>{{serie.popularity}}</h1>
+                        <h1>{{serie.name}}</h1>
                         <p>{{serie.first_air_date | date : 'shortDate'}}</p>
                         <ion-badge color="light" *ngFor="let idGenero of serie.genre_ids">{{generos[idGenero]}}</ion-badge>
                     </div>
