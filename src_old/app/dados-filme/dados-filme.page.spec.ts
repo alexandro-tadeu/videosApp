@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { DadosSeriePage } from './dados-serie.page';
+import { DadosFilmePage } from './dados-filme.page';
 
-describe('DadosSeriePage', () => {
-  let component: DadosSeriePage;
-  let fixture: ComponentFixture<DadosSeriePage>;
+describe('DadosFilmePage', () => {
+  let component: DadosFilmePage;
+  let fixture: ComponentFixture<DadosFilmePage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DadosSeriePage ],
+      declarations: [ DadosFilmePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DadosSeriePage);
+    fixture = TestBed.createComponent(DadosFilmePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

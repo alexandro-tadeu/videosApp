@@ -1,43 +1,5 @@
 <ion-header [translucent]="true">
     <ion-toolbar color="dark">
-        <ion-title> {{titulo}} </ion-title>
+
     </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true" color="light">
-    <ion-searchbar (ionChange)="buscarSeries($event)" placeholder="Buscar"></ion-searchbar>
-
-    <ion-list *ngIf="listaSeries">
-        <ion-item lines="none" *ngIf="listaSeries.results.length === 0">
-            <ion-label class="ion-text-center">
-                Não há séries para exibir...
-            </ion-label>
-        </ion-item>
-        <ion-item-sliding *ngFor="let serie of listaFilmes.results">
-            <ion-item lines="full" (click)="exibirFilme(serie)">
-                <ion-thumbnail slot="start">
-                    <img *ngIf="serie.poster_path" src="https://www.themoviedb.org/t/p/w500/{{serie.poster_path}}" />
-                    <ion-icon *ngIf="!serie.poster_path" name="videocam-off"></ion-icon>
-                </ion-thumbnail>
-
-                <ion-label class="ion-text-wrap">
-                    <div>
-                        <h1>{{serie.title}}</h1>
-                        <p>{{serie.release_date | date : 'shortDate'}}</p>
-                        <ion-badge color="light" *ngFor="let idGenero of serie.genre_ids">{{generos[idGenero]}}</ion-badge>
-                    </div>
-                </ion-label>
-
-                <ion-chip [color]="serie.vote_average <5? 'danger' : ((serie.vote_average <7 )? 'warning' : 'success')" outline>
-                    <ion-label>{{serie.vote_average}}</ion-label>
-                </ion-chip>
-            </ion-item>
-
-            <ion-item-options side="end">
-                <ion-item-option color="laranja" (click)="exibirAlertaFavorito()">
-                    <ion-icon slot="icon-only" name="star"></ion-icon>
-                </ion-item-option>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
-</ion-content>

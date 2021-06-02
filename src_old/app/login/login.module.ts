@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DadosSeriePageRoutingModule } from './dados-serie-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { DadosSeriePage } from './dados-serie.page';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DadosSeriePageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [DadosSeriePage]
+  declarations: [LoginPage]
 })
-export class DadosSeriePageModule {}
+export class LoginPageModule {}

@@ -1,4 +1,4 @@
-import { IListaSeries } from './../models/ISerie.model';
+import { IListaFilmes } from './../models/IFilmeAPI.model';
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
@@ -9,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 @Injectable({
   providedIn: 'root',
 })
-export class SeriesService {
+export class FilmeService {
   lingua = 'pt-BR';
   regiao = 'BR';
 
@@ -21,12 +21,12 @@ export class SeriesService {
     public toastController: ToastController
   ) {}
 
-  buscarSeries(busca: string): Observable<IListaSeries>{
-    const url = `${this.apiURL}search/tv${this.key}&language=${this.lingua}$region=${this.regiao}&query=${busca}`;
+  buscarFilmes(busca: string): Observable<IListaFilmes> {
+    const url = `${this.apiURL}search/movie${this.key}&language=${this.lingua}$region=${this.regiao}&query=${busca}`;
 
-    return this.http.get<IListaSeries>(url).pipe(
-      map((retorno) => retorno),
-      catchError((erro) => this.exibirErro(erro))
+    return this.http.get<IListaFilmes>(url).pipe(
+    map(retorno => retorno),
+    catchError(erro => this.exibirErro(erro))
     );
   }
 
