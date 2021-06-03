@@ -37,14 +37,14 @@ export class Tab2Page implements OnInit {
     }
   }
   exibirSeries(serie: ISeries) {
-    this.dadosServices.guardarDados('filme', serie);
-    this.route.navigateByUrl('/dados-filme');
+    this.dadosServices.guardarDados('serie', serie);
+    this.route.navigateByUrl('/dados-serie');
   }
 
   async exibirAlertaFavorito() {
     const alert = await this.alertController.create({
       header: 'Alerta!',
-      message: 'Deseja realmente favoritar o filme',
+      message: 'Deseja realmente favoritar a serie',
       buttons: [
         {
           text: 'Cancelar',
@@ -66,7 +66,7 @@ export class Tab2Page implements OnInit {
   }
   async apresentarToast() {
     const toast = await this.toastController.create({
-      message: 'Series adicionads aos favoritos.',
+      message: 'Series adicionadas aos favoritos.',
       duration: 2000,
       color: 'success',
     });
