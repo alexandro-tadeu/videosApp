@@ -3,7 +3,7 @@
     <name>Videos App</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="Alexandro.tadeu@etec.sp.gov.br" href="http://ionicframework.com/">Alexandro Tadeu Mathias de Souza</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://localhost:8101" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -98,4 +98,5 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <allow-navigation href="http://localhost:8101" sessionid="3348233d" />
 </widget>
